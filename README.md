@@ -78,3 +78,84 @@ AC -> User : return new access token
     - **Login:** User sends login credentials, which are authenticated to generate tokens.
     - **Refresh Token:** User requests a new access token using a refresh token.
 
+### 📁 Project Structure
+
+```plaintext
+spring-boot-jwt-role-based-authentication/
+│
+├── .idea/
+├── .mvn/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── org/
+│   │   │       └── tutorials/
+│   │   │           ├── config/
+│   │   │           │   ├── OpenApiConfig.java
+│   │   │           │   └── SecurityConfig.java
+│   │   │           ├── controller/
+│   │   │           │   ├── AdminController.java
+│   │   │           │   ├── AuthController.java
+│   │   │           │   └── UserController.java
+│   │   │           ├── dto/
+│   │   │           │   ├── AuthenticationRequest.java
+│   │   │           │   ├── AuthenticationResponse.java
+│   │   │           │   ├── RefreshRequest.java
+│   │   │           │   └── RegisterRequest.java
+│   │   │           ├── entity/
+│   │   │           │   ├── Role.java
+│   │   │           │   └── User.java
+│   │   │           ├── exception/
+│   │   │           │   └── GlobalExceptionHandler.java
+│   │   │           ├── mapper/
+│   │   │           │   └── UserMapper.java
+│   │   │           ├── repository/
+│   │   │           │   └── UserRepository.java
+│   │   │           ├── security/
+│   │   │           │   ├── CustomUserDetailsService.java
+│   │   │           │   ├── JwtAuthenticationFilter.java
+│   │   │           │   └── JwtService.java
+│   │   │           ├── service/
+│   │   │           │   └── AuthenticationService.java
+│   │   │           ├── validator/
+│   │   │           └── SpringBootJwtRoleBasedAuthenticationApplication.java
+│   │   └── resources/
+│   │       ├── static/
+│   │       ├── templates/
+│   │       └── application.properties
+│   └── test/
+│
+├── target/
+├── .gitattributes
+├── .gitignore
+├── HELP.md
+├── mvnw
+└── mvnw.cmd
+```
+
+#### Explanation
+- **`.idea/`:** IntelliJ IDEA project files.
+- **`.mvn/`:** Maven wrapper files.
+- **`src/`:** Main source code directory.
+  - **`main/`:** Contains the main application code.
+    - **`java/`:** Java source files.
+      - **`org/tutorials/`:** Base package for the application.
+        - **`config/`:** Configuration classes.
+        - **`controller/`:** REST controllers.
+        - **`dto/`:** Data Transfer Objects.
+        - **`entity/`:** JPA entities.
+        - **`exception/`:** Exception handling.
+        - **`mapper/`:** Mappers for converting between entities and DTOs.
+        - **`repository/`:** JPA repositories.
+        - **`security/`:** Security-related classes.
+        - **`service/`:** Service layer classes.
+        - **`validator/`:** Validation classes.
+    - **`resources/`:** Configuration files and static resources.
+  - **`test/`:** Test source code directory.
+- **`target/`:** Build output directory.
+- **`.gitattributes`:** Git attributes file.
+- **`.gitignore`:** Git ignore file.
+- **`HELP.md`:** Help documentation.
+- **`mvnw` and `mvnw.cmd`:** Maven wrapper scripts.
+
+---
